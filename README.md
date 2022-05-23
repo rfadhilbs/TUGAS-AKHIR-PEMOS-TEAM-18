@@ -48,7 +48,7 @@ Modul 3 Pengolahan Adveksi-Difusi 1D
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Proses Awal
+#Proses Awal
 
 p = 5000 #Panjang grid
 t = 1200 #Waktu simulasi
