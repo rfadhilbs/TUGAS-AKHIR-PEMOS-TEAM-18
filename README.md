@@ -37,7 +37,11 @@ Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai beri
 
 
 4. Hidrodinamika 2D
+
+
 # 3. SCRIPT DAN HASIL MODEL
+
+Modul 3 Pengolahan Adveksi-Difusi 1D
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -137,6 +141,13 @@ for i in range (1, 16):
   ax3.grid()
 
 plt.show()
+
+HASIL
+![image](https://user-images.githubusercontent.com/106054022/169820885-78720557-2448-4c74-90e7-a86d6f771870.png)
+![image](https://user-images.githubusercontent.com/106054022/169820947-3a4dfbd5-e858-46fd-ba1f-2c6d9b4303cc.png)
+![image](https://user-images.githubusercontent.com/106054022/169821017-1273302f-865e-4bec-bf96-5be6ab588480.png)
+![image](https://user-images.githubusercontent.com/106054022/169821065-8f1b7436-c57c-4e9b-a7e7-02274f5f5d04.png)
+
 
 # 4. PENERAPAN DALAM BIDANG OSEANOGRAFI
 # 5. PENUTUP
