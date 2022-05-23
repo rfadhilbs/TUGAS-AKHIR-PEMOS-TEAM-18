@@ -34,11 +34,13 @@ Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai beri
 
 ∂ζ/∂t+H ∂u/∂x=0 
 
-![image](https://user-images.githubusercontent.com/106054022/169817375-e54e78f6-1102-4f99-9b09-350a0a08794d.png)
 
 
 4. Hidrodinamika 2D
 # 3. SCRIPT DAN HASIL MODEL
+
+![image](https://user-images.githubusercontent.com/106054022/169818278-67bc93b3-8eb5-4463-91bd-c6f40a552aab.png)
+
 # 4. PENERAPAN DALAM BIDANG OSEANOGRAFI
 # 5. PENUTUP
 Demikianlah tugas akhir praktikum pemodelan oseanografi 2022 ini kamu buat. Seluruh authors meminta maaf apabila masih terdapat banyak kekurangan dan kesalahan dalam pembuatan tugas akhir ini. Team 18 selaku authors dari tugas akhir ini mengucapkan terima kasih kepada:
