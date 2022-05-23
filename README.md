@@ -38,8 +38,7 @@ Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai beri
 
 4. Hidrodinamika 2D
 # 3. SCRIPT DAN HASIL MODEL
-
-![image](https://user-images.githubusercontent.com/106054022/169818278-67bc93b3-8eb5-4463-91bd-c6f40a552aab.png)
+![image](https://user-images.githubusercontent.com/106054022/169818522-6d3fc06d-03f7-43c8-88ed-c1fe436e42e0.png)
 
 # 4. PENERAPAN DALAM BIDANG OSEANOGRAFI
 # 5. PENUTUP
