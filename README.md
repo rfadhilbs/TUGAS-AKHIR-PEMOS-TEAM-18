@@ -5,7 +5,7 @@ Repository ini dibuat sebagai pemenuhan tugas akhir Praktikum Pemodelan Oseanogr
 2. Zalfa Apricia Durotunasha
 3. Zufar Tsaqiful Aryan
 4. Audrya Indra Wardana
-5. Raihan Fadhil Budi Saputra
+5. Raihan Fadhil Budi Saputra_26050120130055_A
 6. Luthfan Nurcahyo Wibowo
 7. Ambartullah Nurnovita
 # 2. METODE PENGERJAAN
