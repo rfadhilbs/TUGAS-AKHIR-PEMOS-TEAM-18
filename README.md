@@ -34,6 +34,8 @@ Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai beri
 
 ∂ζ/∂t+H ∂u/∂x=0 
 
+![image](https://user-images.githubusercontent.com/106054022/169817375-e54e78f6-1102-4f99-9b09-350a0a08794d.png)
+
 
 4. Hidrodinamika 2D
 # 3. SCRIPT DAN HASIL MODEL
