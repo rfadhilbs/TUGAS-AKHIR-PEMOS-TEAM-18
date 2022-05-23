@@ -17,6 +17,9 @@ Adveksi merupakan proses terjadinya pergerakan partikel fluida akibat adanya ali
 
 
 2. Adveksi-Difusi 2D
+
+Adveksi merupakan mekanisme perpindahan suatu massa atau materi dari satu titik ke titik lainnya dalam satu horizontal akibat adanya aliran maupun perbedaan tekanan.
+Difusi merupakan mekanisme penyebaran suatu materi akibat adanya kecepatan aliran dan perbedaan konsentrasi suatu materi.
 3. Hidrodinamika 1D
 
 Model Hidrodinamika 1D dibangun dari adanya proses-proses yang mempengaruhi pergerakan massa air. Model ini juga dibangun berdasarkan hukum kontinuitas dan hukum momentum :
