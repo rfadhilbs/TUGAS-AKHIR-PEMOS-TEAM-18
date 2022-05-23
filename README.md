@@ -22,11 +22,13 @@ Adveksi merupakan proses terjadinya pergerakan partikel fluida akibat adanya ali
 Model Hidrodinamika 1D dibangun dari adanya proses-proses yang mempengaruhi pergerakan massa air. Model ini juga dibangun berdasarkan hukum kontinuitas dan hukum momentum :
 
 ΣFx=∂u/∂t+u ∂/∂x+v ∂/∂x  untuk momentum, dan
+
 (∂(ρζ))/∂t-∂(ρUh)/∂x=ρq_x  untuk kontinuitas
 
 Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai berikut :
 
 ∂u/∂t+g ∂ζ/∂x=0, dan
+
 ∂ζ/∂t+H ∂u/∂x=0 
 
 
