@@ -16,3 +16,10 @@ Repository ini dibuat sebagai pemenuhan tugas akhir Praktikum Pemodelan Oseanogr
 # 3. SCRIPT DAN HASIL MODEL
 # 4. PENERAPAN DALAM BIDANG OSEANOGRAFI
 # 5. PENUTUP
+Demikianlah tugas akhir praktikum pemodelan oseanografi 2022 ini kamu buat. Seluruh authors meminta maaf apabila masih terdapat banyak kekurangan dan kesalahan dalam pembuatan tugas akhir ini. Team 18 selaku authors dari tugas akhir ini mengucapkan terima kasih kepada:
+1. Dr. Aris Ismanto, S.Si., M.Si. selaku dosen pengampu mata kuliah Pemodelan Oseanografi
+2. Prof. Dr. Denny Nugroho Sugianto, S.T., M.Si. selaku dosen pengampu mata kuliah Pemodelan Oseanografi
+3. Dr. Elis Indrayanti, S.T., M.Si. selaku dosen pengampu mata kuliah Pemodelan Oseanografi
+4. Rikha Widiaratih, S.Si., M.Si. selaku dosen pengampu mata kuliah Pemodelan Oseanografi
+5. Tim Asisten Praktikum Pemodelan Oseanografi 2022
+6. Seluruh rekan-rekan Oseanografi 2020
