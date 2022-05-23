@@ -10,6 +10,8 @@ Repository ini dibuat sebagai pemenuhan tugas akhir Praktikum Pemodelan Oseanogr
 7. Ambartullah Nurnovita
 # 2. METODE PENGERJAAN
 1. Adveksi-Difusi 1D
+Adveksi
+Adveksi merupakan
 2. Adveksi-Difusi 2D
 3. Hidrodinamika 1D
 4. Hidrodinamika 2D
