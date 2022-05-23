@@ -9,7 +9,7 @@ Repository ini dibuat sebagai pemenuhan tugas akhir Praktikum Pemodelan Oseanogr
 6. Luthfan Nurcahyo Wibowo
 7. Ambartullah Nurnovita
 # 2. METODE PENGERJAAN
-# 1. Adveksi-Difusi 1D
+1. Adveksi-Difusi 1D
 
 Adveksi merupakan proses terjadinya pergerakan partikel fluida akibat adanya aliran. Adveksi adalah mekanisme perpindahan massa suatu materi dari satu titik ke titik lainnya. Persamaan adveksi 1 dimensi dapat ditulis sebagai berikut :
 
@@ -32,7 +32,7 @@ Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai beri
 ∂ζ/∂t+H ∂u/∂x=0 
 
 
-5. Hidrodinamika 2D
+4. Hidrodinamika 2D
 # 3. SCRIPT DAN HASIL MODEL
 # 4. PENERAPAN DALAM BIDANG OSEANOGRAFI
 # 5. PENUTUP
