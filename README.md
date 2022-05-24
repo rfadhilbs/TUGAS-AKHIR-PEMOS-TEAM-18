@@ -24,6 +24,9 @@ Difusi 1D
 
 ![image](https://user-images.githubusercontent.com/105978081/169934909-8260ce62-0e54-429b-b1f4-e149c9ad0f2f.png)
 
+Persamaan Adveksi-Difusi 1D
+
+![image](https://user-images.githubusercontent.com/105978081/169935138-03f92c49-9edb-421f-9569-ed4e2eb8daff.png)
 
 ## 2. Adveksi-Difusi 2D
 
