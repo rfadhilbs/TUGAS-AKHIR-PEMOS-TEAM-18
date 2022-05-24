@@ -227,6 +227,10 @@ ax3.set_ylabel('Water Temperature [degC]')
 plt.show()
 ```
 
+HASIL
+
+![image](https://user-images.githubusercontent.com/105978081/169940661-97aade09-7c97-4ce2-9dfb-260741b3f768.png)
+
 # IV. PENERAPAN DALAM BIDANG OSEANOGRAFI
 
 
