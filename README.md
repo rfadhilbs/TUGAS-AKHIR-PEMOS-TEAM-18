@@ -70,6 +70,18 @@ Persamaan Diskritisasi Adveksi-Difusi 2D
 
 ![image](https://user-images.githubusercontent.com/105978081/169935943-11eb1857-02c4-4675-aaff-973e8f237905.png)
 
+![image](https://user-images.githubusercontent.com/106065813/170073910-1a241a61-c67f-49e4-901d-c8d100635a92.png)
+
+![image](https://user-images.githubusercontent.com/106065813/170074013-dfc4618f-84eb-4376-8a55-839d755e2764.png)
+
+Pada nilai C=0 dan ad=1, terlihat bahwa polutan tidak bergerak. Hal itu ditunjukkan dengan gambar pertama dengan running model ke-5 dan gambar kedua adalah running model ke-210. Hal diatas dapat terjadi karena nilai C adalah 0 dimana nilai C dapat menentukan terjadinya pergerakan.
+
+![image](https://user-images.githubusercontent.com/106065813/170074137-01cb789b-389d-4cc2-b050-fdd5f1bb330e.png)
+
+![image](https://user-images.githubusercontent.com/106065813/170074238-bb0a6005-21e6-4999-aacf-148e4bd81912.png)
+
+Pada nilai C=1 dan ad=0, terlihat bahwa polutan tidak bergerak. Hal itu ditunjukkan dengan gambar pertama dengan running model ke-5 dan gambar kedua adalah running model ke-210. Berbeda dari soal diatas, dalam kasus ini nilai C=1 sedangkan nilai ad=0. Nilai C akan mempengaruhi pergerakan dari polutan, sedangkan arah pergerakan akan ditentukan oleh nilai theta . Dari gambar diatas, nilai theta yang dipakai yaitu scenario 4 sebesar 373.
+
 ## 3. Hidrodinamika 1D
 
 Model Hidrodinamika 1D dibangun dari adanya proses-proses yang mempengaruhi pergerakan massa air. Model ini juga dibangun berdasarkan hukum kontinuitas dan hukum momentum :
