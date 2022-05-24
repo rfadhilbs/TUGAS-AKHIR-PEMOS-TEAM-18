@@ -106,7 +106,7 @@ for i in range (1, 16):
   ax0.legend()
 
   ax0.set(xlabel='Waktu', ylabel='Kecepatan Arus',
-          title=''' Zufar Tsaqiful Aryan_26050120140073
+          title=''' Kelompok 18_Oseanografi 2020
           Perubahan Kecepatan Arus dalam Grid Tertentu di Sepanjang Waktu''')
   ax0.grid()
 
@@ -128,7 +128,7 @@ for i in range (1, 16):
   ax2.legend()
 
   ax2.set(xlabel='Grid', ylabel='Kecepatan Arus',
-          title=''' Zufar Tsaqiful Aryan_26050120140073
+          title=''' Kelompok 18_Oseanografi 2020
           Perubahan Kecepatan Arus dalam Waktu Tertentu di Sepanjang Waktu''')
   ax2.grid()
 
@@ -139,7 +139,7 @@ for i in range (1, 16):
   ax3.legend()
 
   ax3.set(xlabel='Grid', ylabel='Elevasi Muka Air',
-          title=''' Kirana Adhiningtyas_26050120130077
+          title=''' Kelompok 18_Oseanografi 2020
           Perubahan Elevasi Permukaan Air dalam Waktu Tertentu di Sepanjang Waktu''')
   ax3.grid()
 
