@@ -56,9 +56,9 @@ Persamaan Diskritisasi Adveksi-Difusi 2D
 
 Model Hidrodinamika 1D dibangun dari adanya proses-proses yang mempengaruhi pergerakan massa air. Model ini juga dibangun berdasarkan hukum kontinuitas dan hukum momentum :
 
-ΣFx=∂u/∂t+u ∂/∂x+v ∂/∂x  untuk momentum, dan
+![image](https://user-images.githubusercontent.com/105978081/169936974-9e2318ad-5d86-4883-91a2-63e4b85658b4.png)  untuk momentum, dan
 
-(∂(ρζ))/∂t-∂(ρUh)/∂x=ρq_x  untuk kontinuitas
+![image](https://user-images.githubusercontent.com/105978081/169937164-a3206f2a-87ab-4b37-a2da-1bc0698701be.png)  untuk kontinuitas
 
 Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai berikut :
 
