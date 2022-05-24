@@ -348,15 +348,10 @@ HASIL
 ![image](https://user-images.githubusercontent.com/105978081/169940661-97aade09-7c97-4ce2-9dfb-260741b3f768.png)
 
 # IV. PENERAPAN DALAM BIDANG OSEANOGRAFI
-**Modul 2 Adveksi Difusi 2D****
-
-Persamaan numerik adveksi difusi 2D dapat digunakan  untuk membuat scenario penyebaran konsentrasi polutan pada saat bulan kering atau basah. 
-Penelitiannya dilakukan untuk menganalisis polutan sehingga kualitas air sungai dapat 
-diketahui. Persamaan numerik tersebut dapat digunakan untuk melihat pergerakan polutan 
-setiap waktu menggambarkan adanya penurunan konsentrasi polutan yang diakibatkan oleh adanya 
-proses diffusi dari polutan yang terangkut oleh aliran air. Persamaan ini juga dapat digunakan dalam melakukan pemodelan air tanah, menghitung 
-konsentrasi polutan pada pencemaran udara di lingkungan industry dan lain sebagainya.
-
+## Modul 1 Adveksi Difusi 1D
+Pemodelan adveksi difusi 1D dapat digunakan dan diterapkan dalam beberapa hal seperti analisis perubahan konsentrasi terhadap waktu dan ruang, pemodelan intrusi laut, pemodelan pergerakkan radionuklida, pemodelan sebaran nutrien hingga pemodelan suhu permukaan laut dan salinitas. Metode ini memiliki skema hasil yang konsisten dengan simulasi yang cepat untuk metode implisit serta penyelesaian yang mudah untuk metode eksplisit. Namun, metode ini tidak dapat menghasilkan pemodelan yang menampilkan pergerakkan berdasarkan arah.
+## Modul 2 Adveksi Difusi 2D
+Persamaan numerik adveksi difusi 2D dapat digunakan  untuk membuat scenario penyebaran konsentrasi polutan pada saat bulan kering atau basah. Penelitiannya dilakukan untuk menganalisis polutan sehingga kualitas air sungai dapat diketahui. Persamaan numerik tersebut dapat digunakan untuk melihat pergerakan polutan setiap waktu menggambarkan adanya penurunan konsentrasi polutan yang diakibatkan oleh adanya proses diffusi dari polutan yang terangkut oleh aliran air. Persamaan ini juga dapat digunakan dalam melakukan pemodelan air tanah, menghitung konsentrasi polutan pada pencemaran udara di lingkungan industry dan lain sebagainya.
 
 # V. PENUTUP
 Demikianlah tugas akhir praktikum pemodelan oseanografi 2022 ini kamu buat. Seluruh authors meminta maaf apabila masih terdapat banyak kekurangan dan kesalahan dalam pembuatan tugas akhir ini. Team 18 selaku authors dari tugas akhir ini mengucapkan terima kasih kepada:
