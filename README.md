@@ -146,6 +146,7 @@ for i in range (1, 16):
 plt.show()
 
 HASIL
+
 ![image](https://user-images.githubusercontent.com/106054022/169931383-d2843cc2-b4f0-4535-94b6-c9df86e2f2bc.png)
 ![image](https://user-images.githubusercontent.com/106054022/169931477-cb190429-4428-4407-b324-103b096431f5.png)
 ![image](https://user-images.githubusercontent.com/106054022/169931528-7e055d86-71de-4d07-8a2e-2f3fbc13a91c.png)
