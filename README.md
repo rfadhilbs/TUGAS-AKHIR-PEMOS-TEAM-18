@@ -28,6 +28,14 @@ Persamaan Adveksi-Difusi 1D
 
 ![image](https://user-images.githubusercontent.com/105978081/169935138-03f92c49-9edb-421f-9569-ed4e2eb8daff.png)
 
+Diskritisasi Persamaan Model Adveksi-Difusi 1D
+
+Untuk u>0
+![image](https://user-images.githubusercontent.com/105978081/169936328-60d2f208-e4b1-45de-ba27-3a8fec86534c.png)
+
+Untuk u<0
+![image](https://user-images.githubusercontent.com/105978081/169936374-86b340c0-f40f-40cf-8e22-ec4255849f2e.png)
+
 ## 2. Adveksi-Difusi 2D
 
 Adveksi merupakan mekanisme perpindahan suatu massa atau materi dari satu titik ke titik lainnya dalam satu horizontal akibat adanya aliran maupun perbedaan tekanan. Sedangkan difusi merupakan mekanisme penyebaran suatu materi akibat adanya kecepatan aliran dan perbedaan konsentrasi suatu materi. Adapun persamaan adveksi dan difusi 2D adalah sebagai berikut:
