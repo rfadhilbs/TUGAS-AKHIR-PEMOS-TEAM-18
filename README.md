@@ -14,11 +14,13 @@ Repository ini dibuat sebagai pemenuhan tugas akhir Praktikum Pemodelan Oseanogr
 # II. TEORI DASAR
 ## 1. Adveksi-Difusi 1D
 
-Adveksi merupakan proses terjadinya pergerakan partikel fluida akibat adanya aliran. Adveksi adalah mekanisme perpindahan massa suatu materi dari satu titik ke titik lainnya. Sedangkan Difusi adalah proses perpindahan panas berupa rambatan dari air dengan temperatur tinggi keair dengan temperatur yang lebih rendah. Persamaan adveksi difusi 1 dimensi dapat ditulis sebagai berikut :
+Adveksi merupakan proses terjadinya pergerakan partikel fluida akibat adanya aliran. Adveksi adalah mekanisme perpindahan massa suatu materi dari satu titik ke titik lainnya. Sedangkan Difusi adalah proses perpindahan panas berupa rambatan dari air dengan temperatur tinggi keair dengan temperatur yang lebih rendah. Persamaan adveksi 1 dimensi dapat ditulis sebagai berikut :
 
 Adveksi 1D
 
 ![image](https://user-images.githubusercontent.com/105978081/169934857-2f9e56ee-f474-46e2-b9d6-f8e7a32e28fb.png)
+
+Difusi merupakan proses pergerakan partikel dari daerah yang memiliki konsentrasi tinggi ke konsentrasi rendah dan adanya perubahan konsentrasi.
 
 Difusi 1D
 
@@ -36,6 +38,22 @@ Untuk u>0
 Untuk u<0
 ![image](https://user-images.githubusercontent.com/105978081/169936374-86b340c0-f40f-40cf-8e22-ec4255849f2e.png)
 
+-----------------------------------------------------------------
+
+Beberapa metode pada Adveksi-Difusi 1D
+
+**a. FTCS**
+
+Pendekatan beda maju terhadap waktu dan beda tengah terhadap ruang. Solusi FTCS termasuk ke dalam solusi stabil bersyarat dengan syarat kestabilan.
+
+**b. _LEAPFROG_ (FTCS)**
+
+_Leapfrog_ merupakan perluasan dari beda tengah terhadap ruang dan waktu. 
+
+**c. _UPSTREAM_ (FTFS)**
+
+Upstream menggunakan pendekatan beda maju untuk waktu sedangkan untuk turunan terhadap ruang dilakukan dengan melihat arah kecepatan u. Jika u>0 maka digunakan beda mundur dan jika u<0 maka digunakan beda maju. Stabilitas sama dengan leapfrog.
+
 ## 2. Adveksi-Difusi 2D
 
 Adveksi merupakan mekanisme perpindahan suatu massa atau materi dari satu titik ke titik lainnya dalam satu horizontal akibat adanya aliran maupun perbedaan tekanan. Sedangkan difusi merupakan mekanisme penyebaran suatu materi akibat adanya kecepatan aliran dan perbedaan konsentrasi suatu materi. Adapun persamaan adveksi dan difusi 2D adalah sebagai berikut:
@@ -51,471 +69,6 @@ Persamaan Difusi 2D
 Persamaan Diskritisasi Adveksi-Difusi 2D
 
 ![image](https://user-images.githubusercontent.com/105978081/169935943-11eb1857-02c4-4675-aaff-973e8f237905.png)
-
-![image](https://user-images.githubusercontent.com/106065813/170065061-4d704be9-06dc-48ec-b34e-b71219fa4319.png)
-
-![image](https://user-images.githubusercontent.com/106065813/170065129-4fa301b9-3b16-47c5-9b27-f545324b3325.png)
-
-Pada nilai C=1 dan ad=0, terlihat bahwa polutan tidak bergerak. Hal itu ditunjukkan dengan gambar pertama dengan running model ke-5 dan gambar kedua adalah running model ke-210. Berbeda dari soal diatas, dalam kasus ini nilai C=1 sedangkan nilai ad=0. Nilai C akan mempengaruhi pergerakan dari polutan, sedangkan arah pergerakan akan ditentukan oleh nilai theta . Dari gambar diatas, nilai theta yang dipakai yaitu scenario 4 sebesar 373.
-
-  F[n+1,i,j]=((F[n,i,j]*(1-abs(lx)-abs(ly)))  + \
-                        (0.5*(F[n,i-1,j]*(ly+abs(ly)))) + \
-                        (0.5*(F[n,i+1,j]*(abs(ly)-ly))) + \
-                        (0.5*(F[n,i,j-1]*(lx+abs(lx)))) + \
-                        (0.5*(F[n,i,j+1]*(abs(lx)-lx))) + \
-                        (ay*(F[n,i+1,j]-2*(F[n,i,j])+F[n,i-1,j])) + \
-                        (ax*(F[n,i,j+1]-2*(F[n,i,j])+F[n,i,j-1]))) #Diskritisasi
-                        
- Skenario 1 (=58):
-a.u 	= C * np.sin(theta*np.pi/180)
-u 	= 1.58 * sin(58*phi/180)
-		= 1.340
-b.v 	= C * np.cos (theta*np.pi/180)
-v	= 1.58 * cos(58*phi/180)
-	= 0.836
-Skenario 2 (=118):
-a.u 	= C * np.sin(theta*np.pi/180)
-u 	= 1.58* sin(118*phi/180)
-		= 1.394
-b.v 	= C * np.cos (theta*np.pi/180)
-v	= 1.58 * cos(118*phi/180)
-	= -0.742
-Skenario 3 (=193):
-a.u 	= C * np.sin(theta*np.pi/180)
-u 	= 1.58 * sin(193*phi/180)
-		= 0.357
-b.v 	= C * np.cos (theta*np.pi/180)
-v	= 1.58 * cos(193*phi/180)
-	= -1.539
-Skenario 4 (= 373):
-a.u 	= C * np.sin(theta*np.pi/180)
-u 	= 1.58 * sin(373*phi/180)
-		= 0,359
-b.v 	= C * np.cos (theta*np.pi/180)
-v	= 1.58 * cos(373*phi/180)
-	= 1.538
-    
-    Skenario 1
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-import matplotlib.pyplot as plt
-import numpy as np
-import sys
-#%%
-def percentage(part, whole):
-        percentage = 100 * float(part)/float(whole)
-        return str(round(percentage,2)) + "X"
-#%%
-
-#Memasukkan Parameter Awal
-C = 1.58    #Kecepatan Aliran
-ad = 1.58  #Koefisien Difusi
-
-#Arah Arus (Berdasarkan Geographic Convention)
-theta = 58  #Skenario I
-
-#Parameter Lanjutan
-q = 0.95    #Kriteria Kestabilan
-x = 500     #Jumlah Grid Horizontal (x)
-y = 500     #Jumlah Grid Vertikal (y)
-dx = 5 
-dy = 5
-#lama Simulasi
-Tend = 105
-#Tend = 1
-dt = 0.5
-#Polutan
-px = 250   #Polutan pada grid x
-py = 235   #Polutan pada grid y
-Ic = 1058   #Jumlah Polutan
-
-#Perhitungan U dan V ()
-u = C * np.sin(theta*np.pi/180)
-v = C * np.cos(theta*np.pi/180)
-dt_count = 1/((abs(u)/(q*dx))+(abs(v)/(q*dy))+(2*ad/(q*dx*2))+(2*ad/(q*dy*2)))
-
-#%%
-
-Nx = int(x/dx)      #number of mesh in x direction
-Ny = int(y/dy)      #number of mesh in y direction
-Nt = int(Tend/dt)   #number of timesteps
-#Perhitungan Titik Polutan di Buang
-px1 = int(px/dx)
-py1 = int(py/dy)
-
-#Fungsi disederhanakan
-lx = u*dt/dx
-ly = v*dt/dy
-ax = ad*dt/dx**2
-ay = ad*dt/dy**2
-cfl = (2*ax + 2*ay + abs(lx) + abs(ly))     #Syarat Kestabilan CFL
-#Perhitungan CFL
-if cfl >= q:
-    print('CFL Violated, Please use dt :'+str(round(dt_count,4)))
-    sys.exit()
-#%%
-#Pembuatan Grid
-x_grid = np.linspace(0-dx, x+dx, Nx+2)      #Ghostnode pada boundary
-y_grid = np.linspace(0-dx, y+dy, Ny+2)      #Ghostnode pada boundary
-t = np.linspace(0, Tend, Nt+1)
-x_mesh,y_mesh = np.meshgrid(x_grid,y_grid)
-F = np.zeros((Nt+1, Ny+2, Nx+2))
-#Kondisi Awal(Initial Condition)
-F[0,py1,px1] = Ic
-#%%
-#Iterasi
-for n in range (0, Nt):
-    for i in range (1,Ny+1):
-        for j in range(1,Nx+1):
-            F[n+1,i,j]=((F[n,i,j]*(1-abs(lx)-abs(ly)))  + \
-                        (0.5*(F[n,i-1,j]*(ly+abs(ly)))) + \
-                        (0.5*(F[n,i+1,j]*(abs(ly)-ly))) + \
-                        (0.5*(F[n,i,j-1]*(lx+abs(lx)))) + \
-                        (0.5*(F[n,i,j+1]*(abs(lx)-lx))) + \
-                        (ay*(F[n,i+1,j]-2*(F[n,i,j])+F[n,i-1,j])) + \
-                        (ax*(F[n,i,j+1]-2*(F[n,i,j])+F[n,i,j-1]))) #Diskritisasi
-    #Syarat Batas (Dirichlet Boundary Condition)
-    F[n+1,0,:] = 0 #BC Bawah
-    F[n+1,:,0] = 0 #BC Kiri
-    F[n+1,Ny+1,:] = 0 #BC Atas
-    F[n+1,:,Nx+1] = 0 #BC Kanan
-#%%
-    #Output Gambar
-    plt.clf()
-    plt.pcolor(x_mesh, y_mesh, F[n+1,:,:],cmap = 'jet',shading ='auto',edgecolors = 'k')
-    cbar = plt.colorbar(orientation = 'vertical', shrink = 0.95, extend = 'both')
-    cbar.set_label(label='Concentration', size = 8)
-    #plt.clim(0,100)
-    plt.title('Rieke Prameswina L_26050120140085 \n t='+str(round(dt*(n+1),3))+', Initial Condition='+str(Ic),fontsize=10)
-    plt.xlabel('x_grid',fontsize=9)
-    plt.ylabel('y_grid',fontsize=9)
-    plt.axis([0, x, 0, y])
-    #plt.pause(0.01)
-    plt.savefig(str(n+1)+'.jpg', dpi = 300)
-    plt.pause(0.01)
-    plt.close()
-    print('running timestep ke:' +str(n+1) + ' dari:' +str(Nt) + '('+ percentage(n+1,Nt)+')')
-    #print('Nilai CFL:' +str(cfl) + ' dengan arah:' +str(theta))
-
-Skenario 2
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-import matplotlib.pyplot as plt
-import numpy as np
-import sys
-#%%
-def percentage(part, whole):
-        percentage = 100 * float(part)/float(whole)
-        return str(round(percentage,2)) + "X"
-#%%
-
-#Memasukkan Parameter Awal
-C = 1.58    #Kecepatan Aliran
-ad = 1.58   #Koefisien Difusi
-
-#Arah Arus (Berdasarkan Geographic Convention)
-theta = 118  #Skenario II
-
-#Parameter Lanjutan
-q = 0.95    #Kriteria Kestabilan
-x = 500     #Jumlah Grid Horizontal (x)
-y = 500     #Jumlah Grid Vertikal (y)
-dx = 5 
-dy = 5
-#lama Simulasi
-Tend = 105
-#Tend = 1
-dt = 0.5
-#Polutan
-px = 250   #Polutan pada grid x
-py = 235   #Polutan pada grid y
-Ic = 1058   #Jumlah Polutan
-
-#Perhitungan U dan V ()
-u = C * np.sin(theta*np.pi/180)
-v = C * np.cos(theta*np.pi/180)
-dt_count = 1/((abs(u)/(q*dx))+(abs(v)/(q*dy))+(2*ad/(q*dx*2))+(2*ad/(q*dy*2)))
-
-#%%
-
-Nx = int(x/dx)      #number of mesh in x direction
-Ny = int(y/dy)      #number of mesh in y direction
-Nt = int(Tend/dt)   #number of timesteps
-#Perhitungan Titik Polutan di Buang
-px1 = int(px/dx)
-py1 = int(py/dy)
-
-#Fungsi disederhanakan
-lx = u*dt/dx
-ly = v*dt/dy
-ax = ad*dt/dx**2
-ay = ad*dt/dy**2
-cfl = (2*ax + 2*ay + abs(lx) + abs(ly))     #Syarat Kestabilan CFL
-#Perhitungan CFL
-if cfl >= q:
-    print('CFL Violated, Please use dt :'+str(round(dt_count,4)))
-    sys.exit()
-#%%
-#Pembuatan Grid
-x_grid = np.linspace(0-dx, x+dx, Nx+2)      #Ghostnode pada boundary
-y_grid = np.linspace(0-dx, y+dy, Ny+2)      #Ghostnode pada boundary
-t = np.linspace(0, Tend, Nt+1)
-x_mesh,y_mesh = np.meshgrid(x_grid,y_grid)
-F = np.zeros((Nt+1, Ny+2, Nx+2))
-#Kondisi Awal(Initial Condition)
-F[0,py1,px1] = Ic
-#%%
-#Iterasi
-for n in range (0, Nt):
-    for i in range (1,Ny+1):
-        for j in range(1,Nx+1):
-            F[n+1,i,j]=((F[n,i,j]*(1-abs(lx)-abs(ly)))  + \
-                        (0.5*(F[n,i-1,j]*(ly+abs(ly)))) + \
-                        (0.5*(F[n,i+1,j]*(abs(ly)-ly))) + \
-                        (0.5*(F[n,i,j-1]*(lx+abs(lx)))) + \
-                        (0.5*(F[n,i,j+1]*(abs(lx)-lx))) + \
-                        (ay*(F[n,i+1,j]-2*(F[n,i,j])+F[n,i-1,j])) + \
-                        (ax*(F[n,i,j+1]-2*(F[n,i,j])+F[n,i,j-1]))) #Diskritisasi
-    #Syarat Batas (Dirichlet Boundary Condition)
-    F[n+1,0,:] = 0 #BC Bawah
-    F[n+1,:,0] = 0 #BC Kiri
-    F[n+1,Ny+1,:] = 0 #BC Atas
-    F[n+1,:,Nx+1] = 0 #BC Kanan
-#%%
-    #Output Gambar
-    plt.clf()
-    plt.pcolor(x_mesh, y_mesh, F[n+1,:,:],cmap = 'jet',shading ='auto',edgecolors = 'k')
-    cbar = plt.colorbar(orientation = 'vertical', shrink = 0.95, extend = 'both')
-    cbar.set_label(label='Concentration', size = 8)
-    #plt.clim(0,100)
-    plt.title('Rieke Prameswina L_26050120140085 \n t='+str(round(dt*(n+1),3))+', Initial Condition='+str(Ic),fontsize=10)
-    plt.xlabel('x_grid',fontsize=9)
-    plt.ylabel('y_grid',fontsize=9)
-    plt.axis([0, x, 0, y])
-    #plt.pause(0.01)
-    plt.savefig(str(n+1)+'.jpg', dpi = 300)
-    plt.pause(0.01)
-    plt.close()
-    print('running timestep ke:' +str(n+1) + ' dari:' +str(Nt) + '('+ percentage(n+1,Nt)+')')
-    #print('Nilai CFL:' +str(cfl) + ' dengan arah:' +str(theta))
-
-Skenario 3
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-import matplotlib.pyplot as plt
-import numpy as np
-import sys
-#%%
-def percentage(part, whole):
-        percentage = 100 * float(part)/float(whole)
-        return str(round(percentage,2)) + "X"
-#%%
-
-#Memasukkan Parameter Awal
-C = 1.58    #Kecepatan Aliran
-ad = 1.58   #Koefisien Difusi
-
-#Arah Arus (Berdasarkan Geographic Convention)
-theta = 193  #Skenario III
-
-#Parameter Lanjutan
-q = 0.95    #Kriteria Kestabilan
-x = 500     #Jumlah Grid Horizontal (x)
-y = 500     #Jumlah Grid Vertikal (y)
-dx = 5 
-dy = 5
-#lama Simulasi
-Tend = 105
-#Tend = 1
-dt = 0.5
-#Polutan
-px = 250   #Polutan pada grid x
-py = 235   #Polutan pada grid y
-Ic = 1058   #Jumlah Polutan
-
-#Perhitungan U dan V ()
-u = C * np.sin(theta*np.pi/180)
-v = C * np.cos(theta*np.pi/180)
-dt_count = 1/((abs(u)/(q*dx))+(abs(v)/(q*dy))+(2*ad/(q*dx*2))+(2*ad/(q*dy*2)))
-
-#%%
-
-Nx = int(x/dx)      #number of mesh in x direction
-Ny = int(y/dy)      #number of mesh in y direction
-Nt = int(Tend/dt)   #number of timesteps
-#Perhitungan Titik Polutan di Buang
-px1 = int(px/dx)
-py1 = int(py/dy)
-
-#Fungsi disederhanakan
-lx = u*dt/dx
-ly = v*dt/dy
-ax = ad*dt/dx**2
-ay = ad*dt/dy**2
-cfl = (2*ax + 2*ay + abs(lx) + abs(ly))     #Syarat Kestabilan CFL
-#Perhitungan CFL
-if cfl >= q:
-    print('CFL Violated, Please use dt :'+str(round(dt_count,4)))
-    sys.exit()
-#%%
-#Pembuatan Grid
-x_grid = np.linspace(0-dx, x+dx, Nx+2)      #Ghostnode pada boundary
-y_grid = np.linspace(0-dx, y+dy, Ny+2)      #Ghostnode pada boundary
-t = np.linspace(0, Tend, Nt+1)
-x_mesh,y_mesh = np.meshgrid(x_grid,y_grid)
-F = np.zeros((Nt+1, Ny+2, Nx+2))
-#Kondisi Awal(Initial Condition)
-F[0,py1,px1] = Ic
-#%%
-#Iterasi
-for n in range (0, Nt):
-    for i in range (1,Ny+1):
-        for j in range(1,Nx+1):
-            F[n+1,i,j]=((F[n,i,j]*(1-abs(lx)-abs(ly)))  + \
-                        (0.5*(F[n,i-1,j]*(ly+abs(ly)))) + \
-                        (0.5*(F[n,i+1,j]*(abs(ly)-ly))) + \
-                        (0.5*(F[n,i,j-1]*(lx+abs(lx)))) + \
-                        (0.5*(F[n,i,j+1]*(abs(lx)-lx))) + \
-                        (ay*(F[n,i+1,j]-2*(F[n,i,j])+F[n,i-1,j])) + \
-                        (ax*(F[n,i,j+1]-2*(F[n,i,j])+F[n,i,j-1]))) #Diskritisasi
-    #Syarat Batas (Dirichlet Boundary Condition)
-    F[n+1,0,:] = 0 #BC Bawah
-    F[n+1,:,0] = 0 #BC Kiri
-    F[n+1,Ny+1,:] = 0 #BC Atas
-    F[n+1,:,Nx+1] = 0 #BC Kanan
-#%%
-    #Output Gambar
-    plt.clf()
-    plt.pcolor(x_mesh, y_mesh, F[n+1,:,:],cmap = 'jet',shading ='auto',edgecolors = 'k')
-    cbar = plt.colorbar(orientation = 'vertical', shrink = 0.95, extend = 'both')
-    cbar.set_label(label='Concentration', size = 8)
-    #plt.clim(0,100)
-    plt.title('Rieke Prameswina L_26050120140085 \n t='+str(round(dt*(n+1),3))+', Initial Condition='+str(Ic),fontsize=10)
-    plt.xlabel('x_grid',fontsize=9)
-    plt.ylabel('y_grid',fontsize=9)
-    plt.axis([0, x, 0, y])
-    #plt.pause(0.01)
-    plt.savefig(str(n+1)+'.jpg', dpi = 300)
-    plt.pause(0.01)
-    plt.close()
-    print('running timestep ke:' +str(n+1) + ' dari:' +str(Nt) + '('+ percentage(n+1,Nt)+')')
-    #print('Nilai CFL:' +str(cfl) + ' dengan arah:' +str(theta))
-
-
-
-Skenario 4
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[3]:
-
-import matplotlib.pyplot as plt
-import numpy as np
-import sys
-#%%
-def percentage(part, whole):
-        percentage = 100 * float(part)/float(whole)
-        return str(round(percentage,2)) + "X"
-#%%
-
-#Memasukkan Parameter Awal
-C = 1.58    #Kecepatan Aliran
-ad = 1.58  #Koefisien Difusi
-
-#Arah Arus (Berdasarkan Geographic Convention)
-theta = 373  #Skenario IV
-
-#Parameter Lanjutan
-q = 0.95    #Kriteria Kestabilan
-x = 500     #Jumlah Grid Horizontal (x)
-y = 500     #Jumlah Grid Vertikal (y)
-dx = 5 
-dy = 5
-#lama Simulasi
-Tend = 105
-#Tend = 1
-dt = 0.5
-#Polutan
-px = 250   #Polutan pada grid x
-py = 235   #Polutan pada grid y
-Ic = 1058   #Jumlah Polutan
-
-#Perhitungan U dan V ()
-u = C * np.sin(theta*np.pi/180)
-v = C * np.cos(theta*np.pi/180)
-dt_count = 1/((abs(u)/(q*dx))+(abs(v)/(q*dy))+(2*ad/(q*dx*2))+(2*ad/(q*dy*2)))
-
-#%%
-
-Nx = int(x/dx)      #number of mesh in x direction
-Ny = int(y/dy)      #number of mesh in y direction
-Nt = int(Tend/dt)   #number of timesteps
-#Perhitungan Titik Polutan di Buang
-px1 = int(px/dx)
-py1 = int(py/dy)
-
-#Fungsi disederhanakan
-lx = u*dt/dx
-ly = v*dt/dy
-ax = ad*dt/dx**2
-ay = ad*dt/dy**2
-cfl = (2*ax + 2*ay + abs(lx) + abs(ly))     #Syarat Kestabilan CFL
-#Perhitungan CFL
-if cfl >= q:
-    print('CFL Violated, Please use dt :'+str(round(dt_count,4)))
-    sys.exit()
-#%%
-#Pembuatan Grid
-x_grid = np.linspace(0-dx, x+dx, Nx+2)      #Ghostnode pada boundary
-y_grid = np.linspace(0-dx, y+dy, Ny+2)      #Ghostnode pada boundary
-t = np.linspace(0, Tend, Nt+1)
-x_mesh,y_mesh = np.meshgrid(x_grid,y_grid)
-F = np.zeros((Nt+1, Ny+2, Nx+2))
-#Kondisi Awal(Initial Condition)
-F[0,py1,px1] = Ic
-#%%
-#Iterasi
-for n in range (0, Nt):
-    for i in range (1,Ny+1):
-        for j in range(1,Nx+1):
-            F[n+1,i,j]=((F[n,i,j]*(1-abs(lx)-abs(ly)))  + \
-                        (0.5*(F[n,i-1,j]*(ly+abs(ly)))) + \
-                        (0.5*(F[n,i+1,j]*(abs(ly)-ly))) + \
-                        (0.5*(F[n,i,j-1]*(lx+abs(lx)))) + \
-                        (0.5*(F[n,i,j+1]*(abs(lx)-lx))) + \
-                        (ay*(F[n,i+1,j]-2*(F[n,i,j])+F[n,i-1,j])) + \
-                        (ax*(F[n,i,j+1]-2*(F[n,i,j])+F[n,i,j-1]))) #Diskritisasi
-    #Syarat Batas (Dirichlet Boundary Condition)
-    F[n+1,0,:] = 0 #BC Bawah
-    F[n+1,:,0] = 0 #BC Kiri
-    F[n+1,Ny+1,:] = 0 #BC Atas
-    F[n+1,:,Nx+1] = 0 #BC Kanan
-#%%
-    #Output Gambar
-    plt.clf()
-    plt.pcolor(x_mesh, y_mesh, F[n+1,:,:],cmap = 'jet',shading ='auto',edgecolors = 'k')
-    cbar = plt.colorbar(orientation = 'vertical', shrink = 0.95, extend = 'both')
-    cbar.set_label(label='Concentration', size = 8)
-    #plt.clim(0,100)
-    plt.title('Rieke Prameswina L_26050120140085 \n t='+str(round(dt*(n+1),3))+', Initial Condition='+str(Ic),fontsize=10)
-    plt.xlabel('x_grid',fontsize=9)
-    plt.ylabel('y_grid',fontsize=9)
-    plt.axis([0, x, 0, y])
-    #plt.pause(0.01)
-    plt.savefig(str(n+1)+'.jpg', dpi = 300)
-    plt.pause(0.01)
-    plt.close()
-    print('running timestep ke:' +str(n+1) + ' dari:' +str(Nt) + '('+ percentage(n+1,Nt)+')')
-    #print('Nilai CFL:' +str(cfl) + ' dengan arah:' +str(theta))
 
 ## 3. Hidrodinamika 1D
 
@@ -813,10 +366,15 @@ HASIL
 ![image](https://user-images.githubusercontent.com/105978081/169940661-97aade09-7c97-4ce2-9dfb-260741b3f768.png)
 
 # IV. PENERAPAN DALAM BIDANG OSEANOGRAFI
-## Modul 1 Adveksi Difusi 1D
-Pemodelan adveksi difusi 1D dapat digunakan dan diterapkan dalam beberapa hal seperti analisis perubahan konsentrasi terhadap waktu dan ruang, pemodelan intrusi laut, pemodelan pergerakkan radionuklida, pemodelan sebaran nutrien hingga pemodelan suhu permukaan laut dan salinitas. Metode ini memiliki skema hasil yang konsisten dengan simulasi yang cepat untuk metode implisit serta penyelesaian yang mudah untuk metode eksplisit. Namun, metode ini tidak dapat menghasilkan pemodelan yang menampilkan pergerakkan berdasarkan arah.
-## Modul 2 Adveksi Difusi 2D
-Persamaan numerik adveksi difusi 2D dapat digunakan  untuk membuat scenario penyebaran konsentrasi polutan pada saat bulan kering atau basah. Penelitiannya dilakukan untuk menganalisis polutan sehingga kualitas air sungai dapat diketahui. Persamaan numerik tersebut dapat digunakan untuk melihat pergerakan polutan setiap waktu menggambarkan adanya penurunan konsentrasi polutan yang diakibatkan oleh adanya proses diffusi dari polutan yang terangkut oleh aliran air. Persamaan ini juga dapat digunakan dalam melakukan pemodelan air tanah, menghitung konsentrasi polutan pada pencemaran udara di lingkungan industry dan lain sebagainya.
+**Modul 2 Adveksi Difusi 2D****
+
+Persamaan numerik adveksi difusi 2D dapat digunakan  untuk membuat scenario penyebaran konsentrasi polutan pada saat bulan kering atau basah. 
+Penelitiannya dilakukan untuk menganalisis polutan sehingga kualitas air sungai dapat 
+diketahui. Persamaan numerik tersebut dapat digunakan untuk melihat pergerakan polutan 
+setiap waktu menggambarkan adanya penurunan konsentrasi polutan yang diakibatkan oleh adanya 
+proses diffusi dari polutan yang terangkut oleh aliran air. Persamaan ini juga dapat digunakan dalam melakukan pemodelan air tanah, menghitung 
+konsentrasi polutan pada pencemaran udara di lingkungan industry dan lain sebagainya.
+
 
 # V. PENUTUP
 Demikianlah tugas akhir praktikum pemodelan oseanografi 2022 ini kamu buat. Seluruh authors meminta maaf apabila masih terdapat banyak kekurangan dan kesalahan dalam pembuatan tugas akhir ini. Team 18 selaku authors dari tugas akhir ini mengucapkan terima kasih kepada:
