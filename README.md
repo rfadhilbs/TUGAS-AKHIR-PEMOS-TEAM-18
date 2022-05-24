@@ -56,7 +56,7 @@ Upstream menggunakan pendekatan beda maju untuk waktu sedangkan untuk turunan te
 
 ## 2. Adveksi-Difusi 2D
 
-Adveksi merupakan mekanisme perpindahan suatu massa atau materi dari satu titik ke titik lainnya dalam satu horizontal akibat adanya aliran maupun perbedaan tekanan. Sedangkan difusi merupakan mekanisme penyebaran suatu materi akibat adanya kecepatan aliran dan perbedaan konsentrasi suatu materi. Adapun persamaan adveksi dan difusi 2D adalah sebagai berikut:
+Adveksi merupakan mekanisme perpindahan suatu masa atau materi dari satu titik ke titik lainnya dalam satu horizontal akibat adanya aliran maupun perbedaan tekanan. Sedangkan difusi merupakan mekanisme penyebaran suatu materi akibat adanya kecepatan aliran dan perbedaan konsentrasi suatu materi. Adapun persamaan adveksi dan difusi 2D adalah sebagai berikut:
 
 Persamaan Adveksi 2D
 
