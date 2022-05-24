@@ -5,7 +5,7 @@ Repository ini dibuat sebagai pemenuhan tugas akhir Praktikum Pemodelan Oseanogr
 # I. AUTHORS TEAM 18
 1. Raihan Anandra Rahmansyah_26050120140041_B
 2. Zalfa Apricia Durotunasha_26050120140133_B
-3. Zufar Tsaqiful Aryan
+3. Zufar Tsaqiful Aryan_26050120140073_B
 4. Audrya Indra Wardana_26050120140162_B
 5. Raihan Fadhil Budi Saputra_26050120130055_A
 6. Luthfan Nurcahyo Wibowo
