@@ -80,7 +80,7 @@ Pada nilai C=0 dan ad=1, terlihat bahwa polutan tidak bergerak. Hal itu ditunjuk
 
 ![image](https://user-images.githubusercontent.com/106065813/170074238-bb0a6005-21e6-4999-aacf-148e4bd81912.png)
 
-Pada nilai C=1 dan ad=0, terlihat bahwa polutan tidak bergerak. Hal itu ditunjukkan dengan gambar pertama dengan running model ke-5 dan gambar kedua adalah running model ke-210. Berbeda dari soal diatas, dalam kasus ini nilai C=1 sedangkan nilai ad=0. Nilai C akan mempengaruhi pergerakan dari polutan, sedangkan arah pergerakan akan ditentukan oleh nilai theta . Dari gambar diatas, nilai theta yang dipakai yaitu scenario 4 sebesar 373.
+Pada nilai C=1 dan ad=0, terlihat bahwa polutan tidak bergerak. Hal itu ditunjukkan dengan gambar pertama dengan running model ke5 dan gambar kedua adalah running model ke-210. Berbeda dari soal diatas, dalam kasus ini nilai C=1 sedangkan nilai ad=0. Nilai C akan mempengaruhi pergerakan dari polutan, sedangkan arah pergerakan akan ditentukan oleh nilai theta . Dari gambar diatas, nilai theta yang dipakai yaitu scenario 4 sebesar 373.
 
 ## 3. Hidrodinamika 1D
 
