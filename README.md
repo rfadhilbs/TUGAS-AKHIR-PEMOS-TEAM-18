@@ -69,7 +69,7 @@ Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai beri
 
 # III. SCRIPT DAN HASIL MODEL
 
-## Modul 3 Pengolahan Adveksi-Difusi 1D
+## Modul 3 Pemodelan Hidrodinamika 1D
 ```
 import matplotlib.pyplot as plt
 import numpy as np
