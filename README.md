@@ -42,11 +42,7 @@ Model Hidrodinamika 1D dibangun dari adanya proses-proses yang mempengaruhi perg
 
 Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai berikut :
 
-∂u/∂t+g ∂ζ/∂x=0, dan
-
-∂ζ/∂t+H ∂u/∂x=0 
-
-
+![image](https://user-images.githubusercontent.com/105978081/169935437-29706918-c617-471b-a78f-996bb8a0daab.png)
 
 ## 4. Hidrodinamika 2D
 
