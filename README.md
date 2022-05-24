@@ -232,6 +232,12 @@ HASIL
 ![image](https://user-images.githubusercontent.com/105978081/169940661-97aade09-7c97-4ce2-9dfb-260741b3f768.png)
 
 # IV. PENERAPAN DALAM BIDANG OSEANOGRAFI
+**Modul 2 Adveksi Difusi 2D****
+persamaan numerik adveksi difusi 2D dapat digunakan  untuk membuat scenario penyebaran konsentrasi polutan pada saat bulan kering atau basah. 
+Penelitiannya dilakukan untuk menganalisis polutan sehingga kualitas air sungai dapat 
+diketahui. Persamaan numerik tersebut dapat digunakan untuk melihat pergerakan polutan 
+setiap waktu menggambarkan adanya penurunan konsentrasi polutan yang diakibatkan oleh adanya 
+proses diffusi dari polutan yang terangkut oleh aliran air
 
 
 # V. PENUTUP
