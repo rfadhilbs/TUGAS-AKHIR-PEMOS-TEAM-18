@@ -83,9 +83,14 @@ Selain itu, model hidrodinamika 1D ini memiliki persamaan pembangun sebagai beri
 ![image](https://user-images.githubusercontent.com/105978081/169935437-29706918-c617-471b-a78f-996bb8a0daab.png)
 
 ## 4. Hidrodinamika 2D
-
-
-
+Konsep dari hidrodinamika 2D memiliki perbedaan dengan model hidrodinamika 1D dalam beberapa hal. Perbedaan tersebut antara lain:
+|       Hidrodinamika 1D       |                 Hidrodinamika 2D                    |
+| ---------------------------- | --------------------------------------------------- |
+| penampang tegak lurus aliran | merepresentasikan daerah sebagai permukaan kontinyu |
+| tidak dipengaruhi kedalaman  | dipengaruhi kedalaman                               |
+| water level seragam          | water level tidak seragam                           |
+| kecepatan aliran seragam     | kecepatan aliran tidak seragam                      |
+| cocok untuk gradien rendah   | sesuai untuk gradien tinggi                         |
 # III. SCRIPT DAN HASIL MODEL
 
 ## Modul 2 Adveksi Difusi 2D
